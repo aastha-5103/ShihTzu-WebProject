@@ -1,0 +1,836 @@
+/* Base Styles */
+:root {
+    /* Colors */
+    --rich-black-fogra-29: hsl(222, 44%, 8%);
+    --middle-blue-green_40: hsla(174, 64%, 71%, 0.4);
+    --midnight-green: hsl(186, 100%, 19%);
+    --midnight-green_a25: hsla(186, 100%, 19%, 0.25);
+    --independence: hsl(236, 14%, 39%);
+    --verdigris: hsl(182, 100%, 35%);
+    --ming: hsl(186, 72%, 24%);
+    --space-cadet: hsla(226, 45%, 24%);
+    --eerie-black: hsl(0, 0%, 13%);
+    --alice-blue: hsl(187, 25%, 94%);
+    --gray-web: hsl(0, 0%, 50%);
+    --gainsboro: hsl(0, 0%, 87%);
+    --white: hsl(0, 0%, 100%);
+    --white_a20: hsla(0, 0%, 100%, 0.2);
+    --white_a10: hsla(0, 0%, 100%, 0.1);
+    --black: hsl(0, 0%, 0%);
+    
+    /* Typography */
+    --ff-oswald: 'Oswald', sans-serif;
+    --ff-rubik: 'Rubik', sans-serif;
+    
+    --headline-lg: 5rem;
+    --headline-md: 3rem;
+    --headline-sm: 2rem;
+    --title-lg: 1.8rem;
+    --title-md: 1.5rem;
+    --title-sm: 1.4rem;
+    
+    --fw-500: 500;
+    --fw-700: 700;
+    
+    /* Spacing */
+    --section-padding: 120px;
+    
+    /* Box Shadows */
+    --shadow-1: 0px 2px 20px hsla(209, 36%, 72%, 0.2);
+    --shadow-2: 0 4px 16px hsla(0, 0%, 0%, 0.06);
+    
+    /* Border Radius */
+    --radius-circle: 50%;
+    --radius-12: 12px;
+    --radius-6: 6px;
+    --radius-4: 4px;
+    
+    /* Transitions */
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease;
+    --transition-3: 1s ease;
+    --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+    --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+}
+
+/* General Styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    font-family: var(--ff-rubik);
+    font-size: 1.6rem;
+    color: var(--independence);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header.active {
+    background-color: var(--rich-black-fogra-29);
+}
+
+.header .logo img {
+    height: 46px;
+}
+
+.nav-open-btn,
+.nav-close-btn {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: var(--rich-black-fogra-29);
+    transition: right 0.3s ease;
+    z-index: 10;
+}
+
+.navbar.active {
+    right: 0;
+}
+
+.navbar-top {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-list {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-item {
+    border-bottom: 1px solid var(--white_a10);
+}
+
+.navbar-link {
+    display: block;
+    padding: 15px;
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: var(--fw-500);
+    transition: background-color 0.3s ease;
+}
+
+.navbar-link:hover {
+    background-color: var(--midnight-green_a25);
+}
+
+/* Banner Section */
+
+.banner {
+    background-image: url('images/banner1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Gallery page banner */
+.gallery-banner {
+    background-image: url('images\banner2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+/* Contact page banner */
+.contact-banner {
+    background-image: url('images/banner3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: var(--radius-12);
+}
+
+.banner-title {
+    font-size: var(--headline-lg);
+    margin-bottom: 20px;
+}
+
+.banner-description {
+    font-size: var(--title-md);
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--verdigris);
+    color: var(--white);
+    border-radius: var(--radius-6);
+    font-weight: var(--fw-500);
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--ming);
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background-color: var(--alice-blue);
+    text-align: center;
+    box-shadow: var(--shadow-2);
+    border-radius: var(--radius-12);
+    margin: 20px 0;
+}
+
+.section-title {
+    font-size: var(--headline-md);
+    margin-bottom: 10px;
+    color: var(--midnight-green);
+}
+
+.section-description {
+    font-size: var(--title-md);
+    margin-bottom: 20px;
+    color: var(--independence);
+}
+
+/* Gallery Styles */
+.gallery {
+    padding: 60px 20px;
+    background-color: var(--alice-blue);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-12);
+    box-shadow: var(--shadow-2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+    padding: 10px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.gallery-item:hover .gallery-info {
+    opacity: 1;
+}
+
+.gallery-price {
+    font-size: var(--title-md);
+    margin-bottom: 5px;
+}
+
+/* Contact Page Styles */
+.contact {
+    padding: 60px 20px;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--alice-blue);
+    border-radius: var(--radius-12);
+    box-shadow: var(--shadow-2);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--gray-web);
+    border-radius: var(--radius-4);
+    font-size: var(--title-sm);
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--verdigris);
+    outline: none;
+}
+
+.contact-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--verdigris);
+    color: var(--white);
+    font-size: var(--title-md);
+    border: none;
+    border-radius: var(--radius-6);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--ming);
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+.footer {
+    padding: 20px;
+    background-color: var(--rich-black-fogra-29);
+    color: var(--white);
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .gallery-item {
+        width: calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 20px);
+    }
+    
+    .banner-title {
+        font-size: var(--headline-md);
+    }
+    
+    .banner-description {
+        font-size: var(--title-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: calc(100% - 20px);
+    }
+    
+    .banner-title {
+        font-size: var(--headline-sm);
+    }
+    
+    .section-title {
+        font-size: var(--headline-sm);
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: var(--title-sm);
+    }
+}
+
+
+/* Add these new styles to your existing CSS file */
+
+/* About Features */
+.about-features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.feature {
+    flex-basis: calc(33.333% - 40px);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--verdigris);
+    margin-bottom: 15px;
+}
+
+.feature-title {
+    font-size: var(--title-md);
+    margin-bottom: 10px;
+}
+
+.feature-description {
+    font-size: var(--title-sm);
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: var(--alice-blue);
+    padding: 60px 0;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.testimonial {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: var(--radius-12);
+    box-shadow: var(--shadow-2);
+    margin-right: 20px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    font-weight: var(--fw-700);
+    color: var(--verdigris);
+}
+
+/* Footer */
+.footer {
+    padding: 40px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-link {
+    font-size: 1.8rem;
+    color: var(--white);
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--verdigris);
+}
+
+/* Button styles */
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--verdigris);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .feature {
+        flex-basis: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .feature {
+        flex-basis: 100%;
+    }
+}
+
+
+/* Add these new styles and modify existing ones in your style.css file */
+
+/* Gallery Banner */
+.gallery-banner {
+    background-image: url('images/puppy-banner.jpg'); /* Replace with your cute puppy banner image */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gallery-title {
+    font-size: var(--headline-md);
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-subtitle {
+    font-size: var(--title-md);
+    position: relative;
+    z-index: 1;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-12);
+    box-shadow: var(--shadow-2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: var(--white);
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-info {
+    transform: translateY(0);
+}
+
+.dog-name {
+    font-size: var(--title-lg);
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.dog-gender {
+    font-size: var(--title-sm);
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.dog-price {
+    font-size: var(--title-md);
+    font-weight: var(--fw-700);
+    color: var(--verdigris);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Contact Page Styles */
+.contact-banner {
+    background-image: url('images/contact-banner.jpg'); /* Replace with a cute Shih Tzu image */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.contact-banner .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-title {
+    font-size: var(--headline-md);
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-subtitle {
+    font-size: var(--title-md);
+    position: relative;
+    z-index: 1;
+}
+
+.contact-section {
+    padding: 60px 0;
+    background-color: var(--alice-blue);
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-info,
+.contact-form {
+    flex: 1;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: var(--radius-12);
+    box-shadow: var(--shadow-2);
+}
+
+.contact-info h2,
+.contact-form h2 {
+    color: var(--midnight-green);
+    margin-bottom: 20px;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-list i {
+    color: var(--verdigris);
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.contact-info .social-links {
+    margin-top: 20px;
+}
+
+.contact-info .social-link {
+    font-size: 1.5em;
+    color: var(--verdigris);
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.contact-info .social-link:hover {
+    color: var(--midnight-green);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--gainsboro);
+    border-radius: var(--radius-4);
+    font-size: var(--title-sm);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--verdigris);
+    outline: none;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.btn-primary {
+    background-color: var(--verdigris);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius-4);
+    font-size: var(--title-md);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--midnight-green);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+}

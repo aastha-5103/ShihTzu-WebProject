@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShihTzu Home - Find Your Perfect Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="ShihTzu Logo" width="56" height="46">
+            </a>
+
+            <nav class="navbar" data-navbar>
+                <button class="nav-close-btn" aria-label="Close menu" data-nav-toggler>
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#about" class="navbar-link" data-nav-link>About</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="gallery.html" class="navbar-link" data-nav-link>Adopt</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="nav-open-btn" aria-label="Open menu" data-nav-toggler>
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner" id="home">
+            <div class="banner-overlay"></div>
+            <div class="banner-content container">
+                <h1 class="banner-title">Welcome to ShihTzu Home</h1>
+                <p class="banner-description">Find your perfect companion and bring joy to your life</p>
+                <a href="#about" class="btn">Learn More</a>
+                <a href="gallery.html" class="btn btn-secondary">View Our Dogs</a>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">About Us</h2>
+                <p class="section-description">At ShihTzu Home, we are passionate about connecting loving families with adorable Shih Tzu companions. Our mission is to provide a safe and caring environment for these beautiful dogs while finding them their forever homes.</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-heart feature-icon"></i>
+                        <h3 class="feature-title">Loving Care</h3>
+                        <p class="feature-description">We provide the best care for our Shih Tzus before they find their forever homes.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-certificate feature-icon"></i>
+                        <h3 class="feature-title">Health Guaranteed</h3>
+                        <p class="feature-description">All our dogs are vet-checked and come with health guarantees.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-home feature-icon"></i>
+                        <h3 class="feature-title">Perfect Match</h3>
+                        <p class="feature-description">We help you find the Shih Tzu that best fits your lifestyle and family.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Adopters Say</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial">
+                        <p class="testimonial-text">"We adopted Max from ShihTzu Home, and he has brought so much joy to our family. The adoption process was smooth, and the staff was incredibly helpful!"</p>
+                        <p class="testimonial-author">- Sarah J.</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Luna is the perfect addition to our home. Thank you, ShihTzu Home, for helping us find our furry soulmate!"</p>
+                        <p class="testimonial-author">- Mark T.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ShihTzu Home. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

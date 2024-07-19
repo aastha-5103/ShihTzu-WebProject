@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShihTzu Gallery - Adorable Puppies for Adoption</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="ShihTzu Logo" width="56" height="46">
+            </a>
+
+            <nav class="navbar" data-navbar>
+                <button class="nav-close-btn" aria-label="Close menu" data-nav-toggler>
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="index.html#about" class="navbar-link" data-nav-link>About</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="gallery.html" class="navbar-link" data-nav-link>Adopt</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="nav-open-btn" aria-label="Open menu" data-nav-toggler>
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        
+        
+        <section class="banner" id="gallery">
+            <div class="banner-overlay"></div>
+            <div class="banner-content container">
+                <h1 class="gallery-title">Our Adorable Shih Tzus</h1>
+                <p class="gallery-subtitle">Find your perfect furry companion</p>
+        </section>
+
+        <section class="gallery">
+            <div class="container">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/pic1.jpeg" alt="Shih Tzu 1">
+                        <div class="gallery-info">
+                            <h3 class="dog-name">Max</h3>
+                            <p class="dog-gender">Male</p>
+                            <p class="dog-price">$500</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/pic2.jpg" alt="Shih Tzu 2">
+                        <div class="gallery-info">
+                            <h3 class="dog-name">Bella</h3>
+                            <p class="dog-gender">Female</p>
+                            <p class="dog-price">$550</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/pic3.jpeg" alt="Shih Tzu 3">
+                        <div class="gallery-info">
+                            <h3 class="dog-name">Charlie</h3>
+                            <p class="dog-gender">Male</p>
+                            <p class="dog-price">$600</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/pic4.jpeg" alt="Shih Tzu 4">
+                        <div class="gallery-info">
+                            <h3 class="dog-name">Luna</h3>
+                            <p class="dog-gender">Female</p>
+                            <p class="dog-price">$580</p>
+                        </div>
+                    </div>
+                    <!-- Add more gallery items as needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ShihTzu Home. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
